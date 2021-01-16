@@ -1,0 +1,196 @@
+.IMDBSearch {
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(244,246,248);
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .IMDBSearch .title{
+    margin: 10px 0;
+  }
+  
+  .IMDBSearch .title h2{
+    font-weight: bolder;
+  }
+  
+  .IMDBSearch .center{
+   width: 100%;
+  }
+  
+  .IMDBSearch .center .search-panel{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid   rgb(238, 238, 238);
+  }
+  
+  .IMDBSearch .center .search-panel h3{
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .IMDBSearch .center .search-panel .search{
+    border: 1px solid rgb(196, 196, 196);
+    width:  100%;
+    height: 35px;
+    border-radius: 3px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0
+  }
+  
+  .IMDBSearch .center .search-panel .search i{
+    color: rgb(124, 124, 124);
+    margin: 0 10px;
+    font-size: 15px;
+  }
+  .IMDBSearch .center .search-panel .search form{
+    width: 100%;
+  }
+  .IMDBSearch .center .search-panel .search input{
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    color: rgb(65, 65, 65)
+  }
+  
+  .IMDBSearch .center  .search-panel .search input:focus{
+    outline: none
+  }
+
+  .IMDBSearch .center .lower-side{
+    display: flex;
+    margin: 20px 0;
+  }
+
+  .IMDBSearch .center .lower-side .results,
+  .IMDBSearch .center .nominations
+  {
+    width: 50%;
+    margin-right: 5px;
+    background-color: white;
+    border: 1px solid rgb(238, 238, 238);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+
+  
+  .IMDBSearch .center .lower-side .results::-webkit-scrollbar-track,
+  .IMDBSearch .center .lower-side .nominations::-webkit-scrollbar
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(241, 241, 241, 0.9);
+  border-radius: 10px;
+  background-color: #f1f1f1;
+}
+
+.IMDBSearch .center .lower-side .results::-webkit-scrollbar,
+.IMDBSearch .center .lower-side .nominations::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+.IMDBSearch .center .lower-side .results::-webkit-scrollbar-thumb,
+.IMDBSearch .center .lower-side .nominations::-webkit-scrollbar
+{
+  border-radius: 10px;
+  background-color:  rgba(107, 107, 107, 0.4);
+  background-image: -webkit-linear-gradient(90deg,
+                        transparent,
+                        #b9f0be 50%,
+                        transparent,
+                        transparent)
+}
+
+
+  .IMDBSearch .center .lower-side .nominations{
+    margin-left: 5px;
+    margin-right: 0;
+  }
+
+  .IMDBSearch .center .lower-side .no-result{
+    width: 100%;
+    margin: 10px
+  }
+
+  .IMDBSearch .center .lower-side .no-result h3{
+    border: 1px solid #00db00;
+    background-color: #f0f8f0;
+    color: #00db00;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .IMDBSearch .center .lower-side .error-message{
+    width: 100%;
+  }
+
+  .IMDBSearch .center .lower-side .error-message h3{
+    color: red;
+    padding: 10px;
+    margin: 20px
+  }
+
+  .IMDBSearch .center .lower-side h3{
+    font-size: 15px;
+    font-weight: 500;
+
+  }
+
+  .IMDBSearch .center .lower-side .results ul,
+  .IMDBSearch .center .nominations ul{
+    width: 100%;
+    list-style:  none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .IMDBSearch .center .nominations ul li{
+    transition: all .7s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+  }
+
+.movein li:nth-child(1){
+    animation: nominate .7s cubic-bezier(0.075, 0.82, 0.165, 1)
+  }
+
+
+  @keyframes nominate{
+    0%{
+      transform: scale(0.2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+
+  @media screen and (max-width: 1120px){
+    .IMDBSearch .center .lower-side{
+      flex-direction: column;
+    }
+    .IMDBSearch .center .lower-side .nominations,
+    .IMDBSearch .center .lower-side .results
+    {
+      width: 100%;
+      margin-top: 20px;
+      max-height: none;
+      overflow-y: hidden;
+    }
+  }
+  
+  
+  
