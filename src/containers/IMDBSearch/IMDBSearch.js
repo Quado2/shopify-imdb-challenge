@@ -59,11 +59,11 @@ class IMDBSearch extends Component {
             if(result.data && result.data.Response === 'True'){
                 this.setState({searchResult:result.data.Search})
             } else{
-                this.setState({error:true, errorMessage:result.data.Error})
+                this.setState({error:true, errorMessage:result.data.Error, searchResult:[]})
             }
         }
         catch(err){
-            this.setState({searching:false,error:true,errorMessage:'Something went wrong'})
+            this.setState({searching:false,error:true,errorMessage:'Something went wrong', searchResult:[]})
             console.log(err)
         }
         
