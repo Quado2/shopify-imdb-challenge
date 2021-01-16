@@ -53,7 +53,7 @@ class IMDBSearch extends Component {
         //the back end
         const apiKey = '17b7bcf9';
         try{
-            const result = await axios.get(`http://www.omdbapi.com/?s=${searchInput}&apikey=${apiKey}`)
+            const result = await axios.get(`https://www.omdbapi.com/?s=${searchInput}&apikey=${apiKey}`)
             
             this.setState({searching: false})
             if(result.data && result.data.Response === 'True'){
